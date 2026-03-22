@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/b4c79844-3e13-4af1-a664-ba1f435f5c5a)
-
 ## Descrição das Pastas e Arquivos
 
 1. **assets/**
@@ -56,10 +54,6 @@
 
 Telas:
 
-![image](https://github.com/user-attachments/assets/7d4cfcc9-624b-4593-8d02-0301e0f37355)  ![image](https://github.com/user-attachments/assets/c0c1a1f2-673b-4cb2-8f2e-464810a344b8)  
-![image](https://github.com/user-attachments/assets/dd5bc2b0-6eea-4cb2-ac81-0f2360a8867b)  ![image](https://github.com/user-attachments/assets/91678ae0-0f2e-4733-8c4c-a4569e81e9e3)
-![image](https://github.com/user-attachments/assets/e4926f0a-67ec-4d0c-8328-3015142c10a8)  ![image](https://github.com/user-attachments/assets/5cb9d5c0-03b6-44be-9526-3b7044ebcd8d)
-![image](https://github.com/user-attachments/assets/36ec6dc0-a9ff-4502-8989-1961c3f16674)
 
 
 
