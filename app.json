@@ -1,19 +1,16 @@
 {
   "expo": {
-    "name": "agendei-mobile",
+    "name": "Agendei Mobile",
     "slug": "agendei-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/Logo.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
       "image": "./assets/Logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#0d6efd"
-    },
-    "ios": {
-      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
@@ -24,18 +21,6 @@
     },
     "web": {
       "favicon": "./assets/Logo.png"
-    },
-    "extra": {
-      "apiUrl": "https://agendei-api-53h2.onrender.com",
-      "eas": {
-        "projectId": "6087bd0a-b488-4b77-b71f-db83de17fd23"
-      }
-    },
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
-    "updates": {
-      "url": "https://u.expo.dev/6087bd0a-b488-4b77-b71f-db83de17fd23"
     }
   }
 }

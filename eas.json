@@ -1,7 +1,6 @@
 {
   "cli": {
-    "version": ">= 15.0.10",
-    "appVersionSource": "remote"
+    "version": ">= 15.0.10"
   },
   "build": {
     "development": {
@@ -10,20 +9,9 @@
     },
     "preview": {
       "android": {
-        "buildType": "apk",
-        "gradleCommand": ":app:assembleRelease",
-        "output": {
-          "android": {
-            "artifactPath": "android/app/build/outputs/apk/release/Agendei-Mobile.apk"
-          }
-        }
+        "buildType": "apk"
       }
     },
-    "production": {
-      "autoIncrement": true
-    }
-  },
-  "submit": {
     "production": {}
   }
 }
