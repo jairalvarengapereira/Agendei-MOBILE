@@ -6,7 +6,6 @@
     "orientation": "portrait",
     "icon": "./assets/Logo.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": false,
     "splash": {
       "image": "./assets/Logo.png",
       "resizeMode": "contain",
@@ -21,11 +20,6 @@
     },
     "web": {
       "favicon": "./assets/Logo.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "6087bd0a-b488-4b77-b71f-db83de17fd23"
-      }
     }
   }
 }
