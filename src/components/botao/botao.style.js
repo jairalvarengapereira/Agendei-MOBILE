@@ -3,15 +3,16 @@ import { COLORs, FONT_SIZE } from "../../constants/theme"
 export const styles = {
   btn: {
     width: "100%",
-    paddingVertical: 12,
-    paddingHorizontal: 8,
+    paddingVertical: 16,
+    paddingHorizontal: 24,
     borderRadius: 12,
     alignItems: "center",
     justifyContent: "center",
+    marginTop: 8,
   },
 
   primary: {
-    backgroundColor: COLORs.primary,
+    backgroundColor: COLORs.white,
   },
 
   danger: {
@@ -19,11 +20,11 @@ export const styles = {
   },
 
   text: {
-    color: "#0A0F1E",
+    color: COLORs.background,
     fontSize: FONT_SIZE.md,
     fontWeight: "700",
     textAlign: "center",
-    letterSpacing: 0.3,
+    letterSpacing: 0.5,
   },
 
   textDanger: {
@@ -31,6 +32,6 @@ export const styles = {
     fontSize: FONT_SIZE.md,
     fontWeight: "700",
     textAlign: "center",
-    letterSpacing: 0.3,
+    letterSpacing: 0.5,
   },
 }

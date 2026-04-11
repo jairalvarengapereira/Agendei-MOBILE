@@ -29,7 +29,7 @@ export const styles = {
 
   price: {
     fontSize: FONT_SIZE.sm,
-    color: COLORs.primary,
+    color: COLORs.primaryDim,
     fontWeight: "700",
   },
 }

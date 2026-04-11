@@ -13,7 +13,7 @@ export const styles = {
     paddingHorizontal: 4,
   },
 
-  title: {
+  headerTitle: {
     fontSize: FONT_SIZE.lg,
     color: COLORs.textPrimary,
     fontWeight: "700",
@@ -30,7 +30,7 @@ export const styles = {
     borderRadius: 16,
   },
 
-  title: {
+  itemTitle: {
     fontSize: FONT_SIZE.sm,
     color: COLORs.textSecondary,
     marginBottom: 4,
@@ -38,7 +38,7 @@ export const styles = {
     letterSpacing: 0.8,
   },
 
-  text: {
+  itemText: {
     fontSize: FONT_SIZE.md,
     color: COLORs.textPrimary,
     fontWeight: "600",

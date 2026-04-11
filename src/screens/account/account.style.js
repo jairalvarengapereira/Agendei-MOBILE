@@ -3,51 +3,53 @@ import { COLORs, FONT_SIZE } from "../../constants/theme.js"
 export const styles = {
   container: {
     backgroundColor: COLORs.background,
-    justifyContent: "space-between",
     flexGrow: 1,
-    alignItems: "center",
-    paddingHorizontal: 32,
-    paddingVertical: 50,
+    paddingHorizontal: 24,
+    paddingVertical: 40,
   },
 
   headerArea: {
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 40,
+    marginBottom: 32,
   },
 
   subtitle: {
-    fontSize: FONT_SIZE.sm,
+    fontSize: FONT_SIZE.md,
     color: COLORs.textSecondary,
-    marginTop: 12,
+    marginTop: 16,
     letterSpacing: 0.5,
+    textAlign: "center",
   },
 
   logo: {
-    width: 200,
-    height: 64,
+    width: 180,
+    height: 60,
+    resizeMode: "contain",
   },
 
   formArea: {
     width: "100%",
+    gap: 16,
   },
 
   label: {
-    fontSize: FONT_SIZE.xsm,
-    color: COLORs.textSecondary,
-    marginBottom: 6,
-    marginLeft: 2,
-    letterSpacing: 0.8,
-    textTransform: "uppercase",
+    fontSize: FONT_SIZE.sm,
+    color: COLORs.textPrimary,
+    marginBottom: 8,
+    marginLeft: 4,
+    fontWeight: "600",
   },
 
   containerInput: {
-    marginBottom: 20,
+    marginBottom: 8,
     width: "100%",
   },
 
   input: {
-    backgroundColor: COLORs.surfaceAlt,
-    padding: 14,
+    backgroundColor: COLORs.surfaceLight,
+    paddingHorizontal: 16,
+    paddingVertical: 16,
     borderRadius: 12,
     borderWidth: 1,
     borderColor: COLORs.border,
@@ -61,7 +63,8 @@ export const styles = {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
-    paddingBottom: 8,
+    marginTop: 24,
+    paddingBottom: 20,
   },
 
   footerText: {

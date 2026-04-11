@@ -13,7 +13,7 @@ export const styles = {
     paddingTop: 24,
     paddingBottom: 28,
     borderBottomWidth: 2,
-    borderBottomColor: COLORs.primary,
+    borderBottomColor: COLORs.white,
   },
 
   logo: {
@@ -21,7 +21,7 @@ export const styles = {
     height: 80,
     borderRadius: 40,
     borderWidth: 2,
-    borderColor: COLORs.primary,
+    borderColor: COLORs.white,
   },
 
   name: {
@@ -34,7 +34,7 @@ export const styles = {
 
   specialty: {
     fontSize: FONT_SIZE.sm,
-    color: COLORs.primary,
+    color: COLORs.white,
     marginTop: 4,
     letterSpacing: 0.5,
   },

@@ -4,7 +4,6 @@ export const styles = {
   container: {
     flex: 1,
     backgroundColor: COLORs.background,
-    justifyContent: "space-between",
     paddingBottom: 50,
   },
 
@@ -14,21 +13,20 @@ export const styles = {
     borderBottomColor: COLORs.border,
   },
 
-  // Objeto de tema para o componente Calendar do react-native-calendars
   theme: {
     backgroundColor: COLORs.surface,
     calendarBackground: COLORs.surface,
     textSectionTitleColor: COLORs.textSecondary,
     dayTextColor: COLORs.textPrimary,
-    todayTextColor: COLORs.primary,
-    selectedDayBackgroundColor: COLORs.primary,
-    selectedDayTextColor: "#0A0F1E",
+    todayTextColor: COLORs.background,
+    selectedDayBackgroundColor: COLORs.white,
+    selectedDayTextColor: COLORs.background,
     inactiveDayTextColor: COLORs.border,
     monthTextColor: COLORs.textPrimary,
-    arrowColor: COLORs.primary,
+    arrowColor: COLORs.white,
     textDisabledColor: COLORs.border,
-    dotColor: COLORs.primary,
-    indicatorColor: COLORs.primary,
+    dotColor: COLORs.white,
+    indicatorColor: COLORs.white,
   },
 
   textHour: {
@@ -43,7 +41,7 @@ export const styles = {
 
   pickerWrapper: {
     marginHorizontal: 16,
-    backgroundColor: COLORs.surfaceAlt,
+    backgroundColor: COLORs.surfaceLight,
     borderRadius: 12,
     borderWidth: 1,
     borderColor: COLORs.border,

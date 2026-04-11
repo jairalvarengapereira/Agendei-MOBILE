@@ -20,7 +20,7 @@ export const styles = {
 
   specialty: {
     fontSize: FONT_SIZE.sm,
-    color: COLORs.primary,
+    color: COLORs.white,
     marginBottom: 12,
     letterSpacing: 0.3,
   },

@@ -33,7 +33,7 @@ function TabIcon({ source, focused, width = 28, height = 28 }) {
       style={{
         width,
         height,
-        tintColor: focused ? COLORs.primary : COLORs.textSecondary,
+        tintColor: focused ? COLORs.white : COLORs.textSecondary,
         opacity: focused ? 1 : 0.6,
       }}
     />

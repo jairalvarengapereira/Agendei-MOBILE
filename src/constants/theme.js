@@ -1,37 +1,38 @@
 const COLORs = {
-  // Dark Premium — Background layers
-  background: "#0A0F1E",
-  surface: "#121929",
-  surfaceAlt: "#1A2540",
+  // Background - Based on Logo blue (#0D6EFD)
+  background: "#0D6EFD",
+  surface: "#1565E0",
+  surfaceAlt: "#1976E2",
+  surfaceLight: "rgba(255, 255, 255, 0.1)",
 
-  // Brand
-  primary: "#00D4C8",
-  primaryDim: "#00A89E",
-  primaryGlow: "rgba(0, 212, 200, 0.12)",
+  // Brand - Primary from Logo
+  primary: "#FFFFFF",
+  primaryDim: "rgba(255, 255, 255, 0.7)",
+  primaryGlow: "rgba(255, 255, 255, 0.15)",
 
   // Danger / Alert
   danger: "#FF6B6B",
   dangerDim: "#E05555",
 
   // Text
-  textPrimary: "#E8EDF5",
-  textSecondary: "#8892A4",
+  textPrimary: "#FFFFFF",
+  textSecondary: "rgba(255, 255, 255, 0.7)",
 
   // Borders & neutrals
-  border: "#1E2D47",
+  border: "rgba(255, 255, 255, 0.2)",
   white: "#FFFFFF",
 
-  // Legacy aliases (manter compatibilidade)
+  // Legacy aliases
   red: "#FF6B6B",
-  blue2: "#00D4C8",
-  gray1: "#E8EDF5",
-  gray2: "#A0AEC0",
-  gray3: "#8892A4",
-  gray4: "#1E2D47",
-  gray5: "#1A2540",
+  blue2: "#0D6EFD",
+  gray1: "#FFFFFF",
+  gray2: "#E0E0E0",
+  gray3: "rgba(255, 255, 255, 0.7)",
+  gray4: "rgba(255, 255, 255, 0.2)",
+  gray5: "rgba(255, 255, 255, 0.1)",
 };
 
-const FONT_SIZE ={
+const FONT_SIZE = {
   xsm: 11,
   sm: 14,
   md: 16,

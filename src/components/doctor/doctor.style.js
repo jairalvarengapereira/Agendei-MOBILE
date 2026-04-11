@@ -11,18 +11,13 @@ export const styles = {
     marginTop: 6,
     marginBottom: 6,
     borderRadius: 16,
-    shadowColor: COLORs.primary,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.08,
-    shadowRadius: 8,
-    elevation: 3,
   },
 
   iconWrapper: {
     width: 52,
     height: 52,
     borderRadius: 26,
-    backgroundColor: COLORs.surfaceAlt,
+    backgroundColor: COLORs.surfaceLight,
     alignItems: "center",
     justifyContent: "center",
     marginRight: 14,
@@ -44,7 +39,7 @@ export const styles = {
 
   specialty: {
     fontSize: FONT_SIZE.sm,
-    color: COLORs.primary,
+    color: COLORs.white,
     letterSpacing: 0.3,
   },
 
