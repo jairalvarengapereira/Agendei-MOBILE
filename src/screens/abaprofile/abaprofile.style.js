@@ -86,31 +86,31 @@ export const styles = {
 
   buttonRow: {
     flexDirection: "row",
-    marginTop: 20,
-    marginBottom: 20,
+    marginTop: 16,
+    marginBottom: 16,
   },
 
   cancelBtn: {
     flex: 1,
-    marginRight: 8,
+    marginRight: 6,
     backgroundColor: COLORs.surface,
     borderWidth: 1,
     borderColor: COLORs.border,
     borderRadius: 8,
-    paddingVertical: 12,
+    paddingVertical: 10,
     alignItems: "center",
     justifyContent: "center",
   },
 
   cancelBtnText: {
     color: COLORs.textSecondary,
-    fontSize: FONT_SIZE.sm,
-    fontWeight: "600",
+    fontSize: 12,
+    fontWeight: "500",
   },
 
   saveBtn: {
     flex: 1,
-    marginLeft: 8,
+    marginLeft: 6,
   },
 
   logoutArea: {
