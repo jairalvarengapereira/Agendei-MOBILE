@@ -96,15 +96,15 @@ export const styles = {
     backgroundColor: COLORs.surface,
     borderWidth: 1,
     borderColor: COLORs.border,
-    borderRadius: 12,
-    paddingVertical: 16,
+    borderRadius: 8,
+    paddingVertical: 12,
     alignItems: "center",
     justifyContent: "center",
   },
 
   cancelBtnText: {
     color: COLORs.textSecondary,
-    fontSize: FONT_SIZE.md,
+    fontSize: FONT_SIZE.sm,
     fontWeight: "600",
   },
 
