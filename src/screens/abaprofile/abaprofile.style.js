@@ -8,6 +8,10 @@ export const styles = {
     paddingTop: 20,
   },
 
+  scrollContent: {
+    paddingBottom: 40,
+  },
+
   header: {
     marginBottom: 16,
     paddingHorizontal: 4,

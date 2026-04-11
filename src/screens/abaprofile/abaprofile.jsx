@@ -1,4 +1,4 @@
-import { Alert, View, Text, TextInput, TouchableOpacity } from "react-native";
+import { Alert, View, Text, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidingView, Platform } from "react-native";
 import { styles } from "./abaprofile.style";
 import api from "../../constants/api";
 import axios from "axios";
@@ -99,7 +99,15 @@ function AbaProfile(props) {
 
   if (editMode) {
     return (
-      <View style={styles.container}>
+      <KeyboardAvoidingView 
+        style={{ flex: 1 }} 
+        behavior={Platform.OS === "ios" ? "padding" : undefined}
+      >
+        <ScrollView 
+          style={styles.container}
+          contentContainerStyle={styles.scrollContent}
+          keyboardShouldPersistTaps="handled"
+        >
         <View style={styles.header}>
           <Text style={styles.headerTitle}>Editar Perfil</Text>
         </View>
@@ -218,7 +226,8 @@ function AbaProfile(props) {
             <Botao text="Salvar" onPress={SaveProfile} />
           </View>
         </View>
-      </View>
+        </ScrollView>
+      </KeyboardAvoidingView>
     );
   }
 
