@@ -9,7 +9,8 @@ export const styles = {
   },
 
   scrollContent: {
-    paddingBottom: 40,
+    paddingBottom: 100,
+    paddingTop: 20,
   },
 
   header: {
