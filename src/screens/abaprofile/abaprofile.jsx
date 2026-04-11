@@ -6,6 +6,19 @@ import { useContext, useState, useEffect } from "react";
 import Botao from "../../components/botao/botao";
 import { AuthContext } from "../../contexts/auth.js";
 
+function formatPhone(value) {
+  const numbers = value.replace(/\D/g, '');
+  if (numbers.length <= 2) return numbers;
+  if (numbers.length <= 6) return `(${numbers.slice(0,2)}) ${numbers.slice(2)}`;
+  return `(${numbers.slice(0,2)}) ${numbers.slice(2,7)}-${numbers.slice(7,11)}`;
+}
+
+function formatCep(value) {
+  const numbers = value.replace(/\D/g, '');
+  if (numbers.length <= 5) return numbers;
+  return `${numbers.slice(0,5)}-${numbers.slice(5,8)}`;
+}
+
 function AbaProfile(props) {
   const { setUser, user } = useContext(AuthContext);
   const [name, setName] = useState("");
@@ -137,10 +150,11 @@ function AbaProfile(props) {
           <TextInput
             style={styles.input}
             value={fone}
-            onChangeText={setFone}
+            onChangeText={(text) => setFone(formatPhone(text))}
             placeholder="(31) 99999-9999"
             placeholderTextColor="#666"
             keyboardType="phone-pad"
+            maxLength={15}
           />
         </View>
 
@@ -149,11 +163,12 @@ function AbaProfile(props) {
           <TextInput
             style={styles.input}
             value={cep}
-            onChangeText={setCep}
+            onChangeText={(text) => setCep(formatCep(text))}
             placeholder="30100-000"
             placeholderTextColor="#666"
             keyboardType="numeric"
             onEndEditing={searchCep}
+            maxLength={9}
           />
         </View>
 
@@ -263,7 +278,14 @@ function AbaProfile(props) {
       {fone ? (
         <View style={styles.item}>
           <Text style={styles.itemTitle}>Telefone</Text>
-          <Text style={styles.itemText}>{fone}</Text>
+          <Text style={styles.itemText}>{formatPhone(fone)}</Text>
+        </View>
+      ) : null}
+
+      {cep ? (
+        <View style={styles.item}>
+          <Text style={styles.itemTitle}>CEP</Text>
+          <Text style={styles.itemText}>{formatCep(cep)}</Text>
         </View>
       ) : null}
 
