@@ -5,7 +5,7 @@ export const styles = {
     backgroundColor: COLORs.surface,
     flexDirection: "row",
     alignItems: "center",
-    paddingVertical: 16,
+    paddingVertical: 12,
     paddingHorizontal: 16,
     borderBottomWidth: 1,
     borderBottomColor: COLORs.border,
@@ -17,18 +17,18 @@ export const styles = {
   },
 
   containerButton: {
-    width: 110,
+    width: 90,
   },
 
   description: {
-    fontSize: FONT_SIZE.md,
+    fontSize: FONT_SIZE.sm,
     color: COLORs.textPrimary,
     fontWeight: "500",
-    marginBottom: 6,
+    marginBottom: 4,
   },
 
   price: {
-    fontSize: FONT_SIZE.sm,
+    fontSize: FONT_SIZE.xsm,
     color: COLORs.primaryDim,
     fontWeight: "700",
   },
