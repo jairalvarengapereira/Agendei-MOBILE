@@ -17,7 +17,7 @@ export const styles = {
   },
 
   containerButton: {
-    width: 90,
+    width: 70,
   },
 
   description: {

@@ -3,12 +3,12 @@ import { COLORs, FONT_SIZE } from "../../constants/theme"
 export const styles = {
   btn: {
     width: "100%",
-    paddingVertical: 10,
-    paddingHorizontal: 16,
-    borderRadius: 10,
+    paddingVertical: 8,
+    paddingHorizontal: 8,
+    borderRadius: 8,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 4,
+    marginTop: 2,
   },
 
   primary: {
@@ -21,14 +21,14 @@ export const styles = {
 
   text: {
     color: COLORs.white,
-    fontSize: FONT_SIZE.sm,
+    fontSize: 11,
     fontWeight: "600",
     textAlign: "center",
   },
 
   textDanger: {
     color: COLORs.white,
-    fontSize: FONT_SIZE.sm,
+    fontSize: 11,
     fontWeight: "600",
     textAlign: "center",
   },
