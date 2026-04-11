@@ -79,6 +79,12 @@ function Login(props) {
             <Text style={styles.footerLink}> Criar conta agora.</Text>
           </TouchableOpacity>
         </View>
+
+        {/* Copyright */}
+        <View style={styles.copyright}>
+          <Text style={styles.copyrightText}>© 2026 Jair Alvarenga Pereira.</Text>
+          <Text style={styles.copyrightText}>Todos os direitos reservados.</Text>
+        </View>
       </ScrollView>
     </KeyboardAvoidingView>
   );

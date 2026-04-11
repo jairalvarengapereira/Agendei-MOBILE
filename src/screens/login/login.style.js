@@ -77,4 +77,16 @@ export const styles = {
     fontSize: FONT_SIZE.sm,
     fontWeight: "600",
   },
+
+  copyright: {
+    alignItems: "center",
+    marginTop: 24,
+    paddingBottom: 20,
+  },
+
+  copyrightText: {
+    color: COLORs.textSecondary,
+    fontSize: 10,
+    textAlign: "center",
+  },
 }
