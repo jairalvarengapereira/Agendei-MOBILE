@@ -19,6 +19,20 @@ export const styles = {
     fontWeight: "700",
   },
 
+  title: {
+    fontSize: FONT_SIZE.sm,
+    color: COLORs.textSecondary,
+    marginBottom: 4,
+    textTransform: "uppercase",
+    letterSpacing: 0.8,
+  },
+
+  text: {
+    fontSize: FONT_SIZE.md,
+    color: COLORs.textPrimary,
+    fontWeight: "600",
+  },
+
   item: {
     backgroundColor: COLORs.surface,
     borderWidth: 1,
@@ -28,20 +42,6 @@ export const styles = {
     paddingBottom: 16,
     marginBottom: 12,
     borderRadius: 16,
-  },
-
-  itemTitle: {
-    fontSize: FONT_SIZE.sm,
-    color: COLORs.textSecondary,
-    marginBottom: 4,
-    textTransform: "uppercase",
-    letterSpacing: 0.8,
-  },
-
-  itemText: {
-    fontSize: FONT_SIZE.md,
-    color: COLORs.textPrimary,
-    fontWeight: "600",
   },
 
   logoutArea: {

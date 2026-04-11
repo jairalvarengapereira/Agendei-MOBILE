@@ -1,21 +1,21 @@
-import { Alert, View, Text, FlatList } from "react-native";
+import { Alert, View, Text, FlatList, TouchableOpacity } from "react-native";
 import { styles } from "./abahome.style";
 import { useEffect, useState } from "react";
-import Doctor from "../../components/doctor/doctor";
 import api from "../../constants/api";
+import { COLORs, FONT_SIZE } from "../../constants/theme";
 
 function AbaHome(props) {
-  const [doctors, setDoctors] = useState([]);
+  const [services, setServices] = useState([]);
 
-  function ClickDoctor(id_doctor, name, specialty, icon) {
-    props.navigation.navigate("services", { id_doctor, name, specialty, icon });
+  function ClickService(id_service, description) {
+    props.navigation.navigate("DoctorsByService", { id_service, description });
   }
 
-  async function LoadDoctors() {
+  async function LoadServices() {
     try {
-      const response = await api.get("/doctors");
+      const response = await api.get("/services");
       if (response.data) {
-        setDoctors(response.data);
+        setServices(response.data);
       }
     } catch (error) {
       if (error.response?.data.error) {
@@ -27,7 +27,7 @@ function AbaHome(props) {
   }
 
   useEffect(() => {
-    LoadDoctors();
+    LoadServices();
   }, []);
 
   return (
@@ -35,23 +35,28 @@ function AbaHome(props) {
       <View style={styles.header}>
         <Text style={styles.greeting}>Olá! Bom dia 👋</Text>
         <Text style={styles.text}>
-          Agende seus {" "}
-          <Text style={styles.accent}>serviços médicos</Text>
+          Escolha uma {" "}
+          <Text style={styles.accent}>especialidade</Text>
         </Text>
       </View>
 
       <FlatList
-        data={doctors}
-        keyExtractor={(doc) => doc.id_doctor}
+        data={services}
+        keyExtractor={(serv) => serv.id_service}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => (
-          <Doctor
-            id_doctor={item.id_doctor}
-            name={item.name}
-            icon={item.icon}
-            specialty={item.specialty}
-            onPress={ClickDoctor}
-          />
+          <TouchableOpacity 
+            style={styles.serviceItem}
+            onPress={() => ClickService(item.id_service, item.description)}
+          >
+            <View style={styles.serviceContent}>
+              <View style={styles.serviceIcon}>
+                <Text style={styles.serviceIconText}>+</Text>
+              </View>
+              <Text style={styles.serviceDescription}>{item.description}</Text>
+            </View>
+            <Text style={styles.serviceArrow}>›</Text>
+          </TouchableOpacity>
         )}
       />
     </View>

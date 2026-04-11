@@ -50,7 +50,7 @@ function Main() {
         tabBarShowLabel: false,
         headerTitleAlign: "center",
         headerTitle: () => (
-          <Image source={icon.logo} style={{ width: 160, height: 50 }} />
+          <Image source={icon.logo} style={{ width: 120, height: 40 }} />
         ),
       }}
     >

@@ -22,6 +22,7 @@
       "favicon": "./assets/Logo.png"
     },
     "extra": {
+      "apiUrl": "https://agendei-api-53h2.onrender.com",
       "eas": {
         "projectId": "6087bd0a-b488-4b77-b71f-db83de17fd23"
       }
