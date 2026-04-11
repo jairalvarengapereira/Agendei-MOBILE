@@ -8,7 +8,7 @@ function AbaHome(props) {
   const [services, setServices] = useState([]);
 
   function ClickService(id_service, description) {
-    props.navigation.navigate("DoctorsByService", { id_service, description });
+    props.navigation.navigate("ServicesByService", { id_service, description });
   }
 
   async function LoadServices() {
