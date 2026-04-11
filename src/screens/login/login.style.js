@@ -58,11 +58,6 @@ export const styles = {
     width: "100%",
   },
 
-  inputFocused: {
-    borderColor: COLORs.primary,
-    borderWidth: 2,
-  },
-
   footer: {
     width: "100%",
     justifyContent: "center",

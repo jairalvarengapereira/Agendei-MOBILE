@@ -39,7 +39,7 @@ export const styles = {
 
   specialty: {
     fontSize: FONT_SIZE.sm,
-    color: COLORs.white,
+    color: COLORs.primary,
     letterSpacing: 0.3,
   },
 

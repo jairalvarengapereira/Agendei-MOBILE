@@ -12,7 +12,7 @@ export const styles = {
   },
 
   primary: {
-    backgroundColor: COLORs.white,
+    backgroundColor: COLORs.primary,
   },
 
   danger: {
@@ -20,7 +20,7 @@ export const styles = {
   },
 
   text: {
-    color: COLORs.background,
+    color: COLORs.white,
     fontSize: FONT_SIZE.md,
     fontWeight: "700",
     textAlign: "center",

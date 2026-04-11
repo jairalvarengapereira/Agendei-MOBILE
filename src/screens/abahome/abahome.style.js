@@ -27,6 +27,6 @@ export const styles = {
   },
 
   accent: {
-    color: COLORs.white,
+    color: COLORs.primary,
   },
 }
