@@ -49,8 +49,8 @@ function AbaProfile(props) {
     }
   }
 
-  function handleEditMode() {
-    LoadProfile();
+  async function handleEditMode() {
+    await LoadProfile();
     setEditMode(true);
   }
 
