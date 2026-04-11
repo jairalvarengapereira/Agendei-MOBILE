@@ -1,72 +1,154 @@
-## Descrição das Pastas e Arquivos
+# Agendei Mobile 📱
 
-1. **assets/**
-   - Armazena recursos estáticos utilizados no aplicativo, como fontes e imagens.
-   - **fonts/**: Contém as fontes personalizadas.
-     - *OpenSans-Regular.ttf*: Fonte "Open Sans" na variação regular.
-   - **images/**: Armazena imagens utilizadas na interface.
-     - *logo.png*: Logotipo da aplicação.
-     - *background.jpg*: Imagem de fundo para telas específicas.
+![Badge](https://img.shields.io/badge/Platform-Android-brightgreen)
+![Badge](https://img.shields.io/badge/Framework-Expo-blue)
+![Badge](https://img.shields.io/badge/License-MIT-green)
 
-2. **src/**
-   - Diretório principal do código-fonte do aplicativo.
-   - **components/**: Componentes reutilizáveis da interface.
-     - *Button.js*: Componente de botão personalizado.
-     - *Input.js*: Campo de entrada de dados.
-     - *Header.js*: Cabeçalho padrão das telas.
-   - **navigation/**: Gerencia a navegação entre telas.
-     - *AppNavigator.js*: Define a navegação principal após a autenticação.
-     - *AuthNavigator.js*: Gerencia as rotas de autenticação (login e registro).
-   - **screens/**: Contém as diferentes telas do aplicativo, organizadas por funcionalidade.
-     - **Auth/**: Telas relacionadas à autenticação.
-       - *LoginScreen.js*: Tela de login dos usuários.
-       - *RegisterScreen.js*: Tela de registro de novos usuários.
-     - **Main/**: Telas principais após o login.
-       - *HomeScreen.js*: Tela inicial com resumo ou dashboard.
-       - *AppointmentScreen.js*: Tela para visualização e gerenciamento de agendamentos.
-       - *ProfileScreen.js*: Tela de perfil do usuário.
-   - **services/**: Módulos que lidam com funcionalidades externas, como chamadas à API.
-     - *api.js*: Configuração e funções para comunicação com o backend.
-     - *auth.js*: Funções relacionadas à autenticação, como login e registro.
-   - **utils/**: Funções utilitárias e constantes usadas em todo o aplicativo.
-     - *constants.js*: Constantes, como URLs da API e chaves de configuração.
-     - *helpers.js*: Funções auxiliares para manipulação de dados e formatação.
+---
 
-3. **Arquivos na raiz do projeto**
-   - *App.js*: Ponto de entrada do aplicativo; inicializa a navegação principal.
-   - *app.json*: Configurações do aplicativo, como nome e identificadores.
-   - *babel.config.js*: Configurações do Babel para transpilar o código JavaScript.
-   - *package.json*: Lista as dependências, scripts e informações do projeto.
-   - *README.md*: Documentação inicial do projeto, com instruções e informações gerais.
+<div align="center">
 
-## Conexões e Fluxo do Aplicativo
+![Agendei Logo](./assets/Logo.png)
 
-1. **Inicialização (App.js)**
-   - O aplicativo começa executando o App.js, que configura o provedor de navegação e define o AppNavigator como o componente principal.
+### Sistema de Agendamento de Consultas Médicas
 
-2. **Navegação (navigation/)**
-   - *AppNavigator.js*: Define as rotas principais acessíveis após o login, como HomeScreen, AppointmentScreen e ProfileScreen.
-   - *AuthNavigator.js*: Gerencia as rotas de autenticação, incluindo LoginScreen e RegisterScreen.
+</div>
 
-3. **Telas (screens/)**
-   - **Autenticação (Auth/)**
-     - *LoginScreen.js*: Utiliza o componente Input para capturar credenciais e o Button para submissão. Ao autenticar, redireciona para o AppNavigator.
+---
 
-Telas:
+## 📱Sobre o App
 
+O **Agendei Mobile** é um aplicativo mobile para agendamento de consultas médicas, desenvolvido com React Native e Expo. Permite que pacientes encontrem médicos por especialidade, agendem consultas e gerenciem seu perfil.
 
+---
 
+## 🚀Funcionalidades
 
+### ✨Principais
+- 🔐 **Autenticação** - Login e cadastro de usuários
+- 🔍 **Busca por Especialidade** - Encontre médicos pela área de atuação
+- 📅 **Agendamento** - Marque consultas de forma simples
+- 👤 **Perfil do Usuário** - Gerencie seus dados pessoais
+- 🔑 **Alteração de Senha** - Mude sua senha com segurança
+- 📍 **Busca Automática de CEP** - Endereço preenchido automaticamente
 
+### 📱Telas
+- **Login** - Tela de acesso ao sistema
+- **Cadastro** - Registro de novos usuários
+- **Especialidades** - Lista de especialidades médicas
+- **Médicos** - Médicos por especialidade
+- **Serviços** - Serviços disponíveis por médico
+- **Agendamento** - Escolha de data e horário
+- **Perfil** - Edição de dados e alteração de senha
 
+---
 
+## 🛠️Tecnologias
 
+| Tecnologia | Descrição |
+|------------|-----------|
+| **React Native** | Framework para desenvolvimento mobile |
+| **Expo** | Plataforma e ferramentas para React Native |
+| **React Navigation** | Navegação entre telas |
+| **Axios** | Cliente HTTP para API |
+| **AsyncStorage** | Armazenamento local |
+| **ViaCEP** | API de busca de CEP |
 
+---
 
+## 📁Estrutura do Projeto
 
+```
+agendei-mobile/
+├── assets/                 # Recursos estáticos
+│   └── Logo.png           # Logo do app
+├── src/
+│   ├── components/        # Componentes reutilizáveis
+│   │   ├── botao/         # Botão customizado
+│   │   ├── doctor/        # Card de médico
+│   │   ├── service/        # Card de serviço
+│   │   └── appointments/   # Card de agendamento
+│   ├── constants/         # Constantes e configurações
+│   │   ├── api.js         # Configuração da API
+│   │   ├── icon.js        # Ícones do app
+│   │   └── theme.js       # Tema de cores
+│   ├── contexts/          # Contextos React
+│   │   └── auth.js        # Contexto de autenticação
+│   ├── routes/            # Navegação
+│   │   ├── routes.js      # Rotas públicas
+│   │   ├── routesPrivate.js # Rotas privadas
+│   │   └── routesOpen.js  # Rotas abertas
+│   └── screens/           # Telas do aplicativo
+│       ├── account/       # Cadastro
+│       ├── abaprofile/    # Perfil
+│       ├── abahome/       # Home
+│       ├── abacalendar/   # Calendário
+│       ├── login/         # Login
+│       ├── main/          # Abas principais
+│       ├── schedule/      # Agendamento
+│       ├── services/      # Serviços do médico
+│       └── servicesbyservice/ # Médicos por especialidade
+├── app.json               # Configurações Expo
+├── package.json           # Dependências
+└── README.md             # Este arquivo
+```
 
+---
 
+## ⚙️Configuração
 
+### Pré-requisitos
+- Node.js 18+
+- npm ou yarn
 
+### Instalação
 
+```bash
+# Clone o repositório
+git clone https://github.com/jairalvarengapereira/Agendei-MOBILE.git
 
+# Entre no diretório
+cd Agendei-MOBILE
+
+# Instale as dependências
+npm install
+
+# Inicie o projeto
+npx expo start
+```
+
+### Build para Android
+
+```bash
+# Build com EAS
+npx eas build -p android --profile preview
+```
+
+---
+
+## 🔗APIs Utilizadas
+
+- **API Principal**: https://agendei-api-53h2.onrender.com
+- **ViaCEP**: https://viacep.com.br (busca automática de endereço)
+
+---
+
+## 📄Licença
+
+MIT License © 2026 Jair Alvarenga Pereira
+
+---
+
+## 👨‍💻Autor
+
+**Jair Alvarenga Pereira**
+
+- GitHub: [@jairalvarengapereira](https://github.com/jairalvarengapereira)
+
+---
+
+<div align="center">
+
+**Made with ❤️ for healthcare**
+
+</div>
