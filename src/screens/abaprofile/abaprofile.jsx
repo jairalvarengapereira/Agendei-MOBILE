@@ -20,9 +20,11 @@ function AbaProfile(props) {
   const [uf, setUf] = useState("");
   const [editMode, setEditMode] = useState(false);
   const [loadingCep, setLoadingCep] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   async function LoadProfile() {
     try {
+      setLoading(true);
       const response = await api.get("/users/profile/");
       if (response.data) {
         setName(response.data.name || "");
@@ -42,7 +44,14 @@ function AbaProfile(props) {
       } else {
         Alert.alert("Ocorreu um erro. Tente novamente mais tarde.");
       }
+    } finally {
+      setLoading(false);
     }
+  }
+
+  function handleEditMode() {
+    LoadProfile();
+    setEditMode(true);
   }
 
   async function searchCep() {
@@ -237,7 +246,7 @@ function AbaProfile(props) {
         <Text style={styles.headerTitle}>Meu Perfil</Text>
       </View>
 
-      <TouchableOpacity style={styles.editButton} onPress={() => setEditMode(true)}>
+      <TouchableOpacity style={styles.editButton} onPress={handleEditMode}>
         <Text style={styles.editButtonText}>✏️ Editar</Text>
       </TouchableOpacity>
 
