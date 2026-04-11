@@ -3,7 +3,7 @@ import { COLORs, FONT_SIZE } from "../../constants/theme"
 export const styles = {
   btn: {
     width: "100%",
-    paddingVertical: 10,
+    paddingVertical: 12,
     paddingHorizontal: 8,
     borderRadius: 8,
     alignItems: "center",
