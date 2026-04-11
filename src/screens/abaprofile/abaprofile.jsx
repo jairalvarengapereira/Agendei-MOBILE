@@ -1,6 +1,7 @@
 import { Alert, View, Text, TextInput, TouchableOpacity } from "react-native";
 import { styles } from "./abaprofile.style";
 import api from "../../constants/api";
+import axios from "axios";
 import { useContext, useState, useEffect } from "react";
 import Botao from "../../components/botao/botao";
 import { AuthContext } from "../../contexts/auth.js";
@@ -18,6 +19,7 @@ function AbaProfile(props) {
   const [cidade, setCidade] = useState("");
   const [uf, setUf] = useState("");
   const [editMode, setEditMode] = useState(false);
+  const [loadingCep, setLoadingCep] = useState(false);
 
   async function LoadProfile() {
     try {
@@ -40,6 +42,25 @@ function AbaProfile(props) {
       } else {
         Alert.alert("Ocorreu um erro. Tente novamente mais tarde.");
       }
+    }
+  }
+
+  async function searchCep() {
+    if (cep.length < 8) return;
+    
+    setLoadingCep(true);
+    try {
+      const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+      if (response.data && !response.data.erro) {
+        setLogr(response.data.logradouro || "");
+        setBairro(response.data.bairro || "");
+        setCidade(response.data.localidade || "");
+        setUf(response.data.uf || "");
+      }
+    } catch (error) {
+      // Silencioso - não mostra erro para o usuário
+    } finally {
+      setLoadingCep(false);
     }
   }
 
@@ -107,7 +128,7 @@ function AbaProfile(props) {
         </View>
 
         <View style={styles.editItem}>
-          <Text style={styles.label}>CEP</Text>
+          <Text style={styles.label}>CEP {loadingCep && "(buscando...)"}</Text>
           <TextInput
             style={styles.input}
             value={cep}
@@ -115,6 +136,7 @@ function AbaProfile(props) {
             placeholder="30100-000"
             placeholderTextColor="#666"
             keyboardType="numeric"
+            onEndEditing={searchCep}
           />
         </View>
 
