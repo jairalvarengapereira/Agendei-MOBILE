@@ -118,6 +118,27 @@ export const styles = {
     marginLeft: 6,
   },
 
+  passwordToggle: {
+    marginVertical: 16,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    backgroundColor: COLORs.surface,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: COLORs.border,
+  },
+
+  passwordToggleText: {
+    color: COLORs.primary,
+    fontSize: FONT_SIZE.sm,
+    fontWeight: "600",
+    textAlign: "center",
+  },
+
+  changePasswordBtn: {
+    marginBottom: 16,
+  },
+
   logoutArea: {
     marginTop: 8,
   },

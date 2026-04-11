@@ -1,5 +1,6 @@
 import { Alert, View, Text, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidingView, Platform } from "react-native";
 import { styles } from "./abaprofile.style";
+import { COLORs } from "../../constants/theme.js";
 import api from "../../constants/api";
 import axios from "axios";
 import { useContext, useState, useEffect } from "react";
@@ -34,6 +35,10 @@ function AbaProfile(props) {
   const [editMode, setEditMode] = useState(false);
   const [loadingCep, setLoadingCep] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [showPasswordFields, setShowPasswordFields] = useState(false);
+  const [currentPassword, setCurrentPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   async function LoadProfile() {
     try {
@@ -101,6 +106,34 @@ function AbaProfile(props) {
       });
       Alert.alert("Perfil atualizado com sucesso!");
       setEditMode(false);
+    } catch (error) {
+      if (error.response?.data.error) {
+        Alert.alert(error.response.data.error);
+      } else {
+        Alert.alert("Ocorreu um erro. Tente novamente mais tarde.");
+      }
+    }
+  }
+
+  async function ChangePassword() {
+    if (newPassword !== confirmPassword) {
+      Alert.alert("As senhas não conferem!");
+      return;
+    }
+    if (newPassword.length < 6) {
+      Alert.alert("A senha deve ter pelo menos 6 caracteres!");
+      return;
+    }
+    try {
+      await api.put(`/users/${user.id_user}/password`, {
+        currentPassword,
+        newPassword
+      });
+      Alert.alert("Senha alterada com sucesso!");
+      setShowPasswordFields(false);
+      setCurrentPassword("");
+      setNewPassword("");
+      setConfirmPassword("");
     } catch (error) {
       if (error.response?.data.error) {
         Alert.alert(error.response.data.error);
@@ -243,6 +276,59 @@ function AbaProfile(props) {
             />
           </View>
         </View>
+
+        <TouchableOpacity 
+          style={styles.passwordToggle}
+          onPress={() => setShowPasswordFields(!showPasswordFields)}
+        >
+          <Text style={styles.passwordToggleText}>
+            {showPasswordFields ? "🔒 Cancelar alteração de senha" : "🔑 Alterar senha"}
+          </Text>
+        </TouchableOpacity>
+
+        {showPasswordFields && (
+          <>
+            <View style={styles.editItem}>
+              <Text style={styles.label}>Senha Atual</Text>
+              <TextInput
+                style={styles.input}
+                value={currentPassword}
+                onChangeText={setCurrentPassword}
+                placeholder="••••••••"
+                placeholderTextColor="#666"
+                secureTextEntry
+              />
+            </View>
+
+            <View style={styles.editItem}>
+              <Text style={styles.label}>Nova Senha</Text>
+              <TextInput
+                style={styles.input}
+                value={newPassword}
+                onChangeText={setNewPassword}
+                placeholder="••••••••"
+                placeholderTextColor="#666"
+                secureTextEntry
+              />
+            </View>
+
+            <View style={styles.editItem}>
+              <Text style={styles.label}>Confirmar Nova Senha</Text>
+              <TextInput
+                style={styles.input}
+                value={confirmPassword}
+                onChangeText={setConfirmPassword}
+                placeholder="••••••••"
+                placeholderTextColor="#666"
+                secureTextEntry
+              />
+            </View>
+
+            <View style={styles.changePasswordBtn}>
+              <Botao text="Alterar Senha" onPress={ChangePassword} />
+            </View>
+          </>
+        )}
 
         <View style={styles.buttonRow}>
           <TouchableOpacity style={styles.cancelBtn} onPress={() => setEditMode(false)}>
