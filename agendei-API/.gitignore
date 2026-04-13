@@ -1,0 +1,12 @@
+# Ignorar arquivos compilados
+*.class
+*.exe
+*.dll
+
+# Ignorar diretórios específicos
+/node_modules
+/build
+
+# Ignorar arquivos de configuração do sistema
+*.DS_Store
+*.env

@@ -1,0 +1,16 @@
+{
+  "name": "Agendei",
+  "short_name": "Agendei",
+  "description": "Sistema de Agendamento de Consultas Médicas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d6efd",
+  "icons": [
+    {
+      "src": "/Logo.png?v=2",
+      "sizes": "512x512 192x192 48x48",
+      "type": "image/png"
+    }
+  ]
+}

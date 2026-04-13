@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "Agendei Mobile",
+    "slug": "agendei-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/Logo.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/Logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0891b2"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Logo.png",
+        "backgroundColor": "#0891b2"
+      },
+      "package": "com.agendei.mobile"
+    },
+    "ios": {
+      "bundleIdentifier": "com.agendei.mobile"
+    },
+    "web": {
+      "favicon": "./assets/Logo.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6087bd0a-b488-4b77-b71f-db83de17fd23"
+      },
+      "apiUrl": "https://agendei-api-53h2.onrender.com"
+    },
+    "owner": "jair.dev"
+  }
+}
