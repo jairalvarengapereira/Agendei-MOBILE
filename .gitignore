@@ -17,6 +17,8 @@ build/
 # Expo
 .expo/
 .expo-shared/
+web-build/
+expo-env.d.ts
 
 # IDE
 .vscode/
@@ -27,6 +29,7 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+*.pem
 
 # Logs
 npm-debug.log*
@@ -41,6 +44,17 @@ coverage/
 *.sqlite
 *.sqlite3
 
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
 # Misc
 tmp/
 
@@ -48,3 +62,6 @@ tmp/
 test-build/
 Projeto_Agendei_Documentacao.docx
 migration_supabase.sql
+
+# typescript
+*.tsbuildinfo
